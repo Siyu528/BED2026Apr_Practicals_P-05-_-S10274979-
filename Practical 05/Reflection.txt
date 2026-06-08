@@ -1,0 +1,14 @@
+# Practical 05 Homework Reflection
+
+In my final project structure, the Model is responsible for database operations, such as selecting, inserting, updating, and deleting records. The Controller handles the request and response logic. It receives data from the client, calls the correct model function, and sends back the correct response. The View is the frontend part of the application. It contains the HTML, CSS, and JavaScript files that users interact with in the browser.
+
+Having a separate frontend View simplifies the backend API because the backend only needs to focus on data and logic. It does not need to worry about how the page looks. The frontend handles the user interface, while the backend handles the API routes and database operations.
+
+From Practical 03 to Practical 05, it became easier to identify and fix bugs after the project was refactored into MVC in Practical 04. This is because the code was separated into smaller parts. If there was a database problem, I could check the Model. If the response was wrong, I could check the Controller. If the page did not display correctly, I could check the View.
+
+The most challenging part for me was connecting the frontend pages to the backend API using fetch. Sometimes the request URL or method was wrong, so the data did not appear or update correctly. I solved this by checking the browser developer tools and testing the API in Postman first.
+
+If I need to add a new feature, such as adding a new field or user authentication, the MVC structure helps me organize the work. I can update the database logic in the Model, update the request handling in the Controller, update the route if needed, and then update the View. This is more organized than Practical 03, where most logic was inside one app.js file.
+
+The hands-on coding helped me understand MVC, validation, error handling, and parameterized queries better than only reading about them. By building and fixing the API myself, I could see why each concept is useful. Validation prevents bad data, error handling makes the API more reliable, and parameterized queries help protect the database from SQL injection.
+
