@@ -1,0 +1,35 @@
+Task 1: Reflection on Refactoring
+
+1. What were the main changes you made to refactor the code into MVC architecture?
+
+The main change was splitting the code into different folders and files. Previously, all the routes, database queries, and business logic were stored in app.js. After refactoring, I created a Model folder to handle database operations, a Controller folder to handle requests and responses, and a Routes folder to define API routes. This made the code more structured and easier to manage.
+
+2. What challenges did you face during the refactoring process?
+
+One challenge was understanding which code belonged in the Model and which belonged in the Controller. I also faced some issues with importing and exporting functions correctly between files. Debugging became more difficult at first because the code was spread across multiple files.
+
+3. How does MVC change the way you think about adding new features?
+
+MVC encourages me to think about each part separately. When adding a new feature, I know where each piece of code should go. Database-related code goes into the Model, request handling goes into the Controller, and route definitions go into the Routes file. This makes development more organized.
+
+4. In what ways is MVC more organized than the previous version?
+
+The MVC version is easier to read because related code is grouped together. Instead of searching through one large app.js file, I can quickly find the correct file for the functionality I want to modify. This improves maintainability and readability.
+
+5. How does separating concerns make the code better?
+
+Separating concerns improves code quality because each file has a specific responsibility. Models focus on database access, Controllers focus on processing requests, and Routes focus on endpoint definitions. This reduces duplication and makes the application easier to test and maintain.
+
+Task 2: Reflecting on Robustness & Security
+
+1. How does input validation improve reliability and user-friendliness?
+
+Input validation checks whether the data sent by users is valid before processing it. This prevents invalid or incomplete data from entering the database. For example, if a student submits an empty name field, the validation middleware can return a clear error message instead of allowing incorrect data to be stored.
+
+2. How do parameterized queries prevent SQL injection?
+
+Parameterized queries separate SQL commands from user input. The database treats user input as data instead of executable SQL code. This prevents attackers from injecting malicious SQL statements. It is more secure than string concatenation because user input cannot change the structure of the query.
+
+3. How can robust error handling improve security?
+
+Robust error handling prevents sensitive system information from being exposed to users. Instead of displaying database errors or server details, the API returns a generic error message. This reduces the information available to attackers and makes it harder for them to identify system weaknesses.
